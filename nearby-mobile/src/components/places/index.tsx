@@ -2,6 +2,7 @@ import type { PlaceProps } from '@/view-models/home-models-view'
 import { Text, useWindowDimensions } from 'react-native'
 
 import BottomSheet, { BottomSheetFlatList } from '@gorhom/bottom-sheet'
+import { useRouter } from 'expo-router'
 import { useRef } from 'react'
 import { Place } from '../place'
 import { s } from './styles'
@@ -12,6 +13,7 @@ interface Props {
 
 export function Places({ data }: Props) {
   const dimensions = useWindowDimensions()
+  const router = useRouter()
 
   const bottomSheetRef = useRef<BottomSheet>(null)
 
@@ -31,7 +33,12 @@ export function Places({ data }: Props) {
       <BottomSheetFlatList
         data={data}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => <Place data={item} />}
+        renderItem={({ item }) => (
+          <Place
+            data={item}
+            onPress={() => router.push(`/market/${item.id}`)}
+          />
+        )}
         contentContainerStyle={s.content}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={() => (

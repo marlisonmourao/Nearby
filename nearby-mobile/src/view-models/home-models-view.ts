@@ -13,10 +13,13 @@ export type PlaceProps = {
   coupons: number
   cover: string
   address: number
+  latitude: number
+  longitude: number
 }
 
 export class HomeViewModel {
   private _categories: Category[] = []
+
   private _setCategories: (categories: Category[]) => void
 
   private _selectedCategory = ''
