@@ -7,7 +7,7 @@
 
 ## 📲 Telas do Aplicativo
 
-![Splash Screen](./.github/splash.png) | ![Start Screen](./.github/start.png) | ![Home Screen](./.github/home.png) | ![Coupons List](./.github/Home-List.png) 
+![Splash Screen](./.github/Splash.png) | ![Start Screen](./.github/Start.png) | ![Home Screen](./.github/Home.png) | ![Coupons List](./.github/Home-List.png) 
 
 
 
